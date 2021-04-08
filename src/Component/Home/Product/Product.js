@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 
 const Product = ({ product,showBtn }) => {
     
-
-
     const { name,price, imageURL,_id} = product;
     return (
         <div className="text-center m-4 col-md-3 ">

@@ -13,7 +13,7 @@ const AddProduct = () => {
       price: data.price,
       imageURL : image
     }
-    const url =`http://localhost:5055/addProduct`;
+    const url =`https://tranquil-bastion-92076.herokuapp.com/addProduct`;
     fetch(url,{
       method: 'POST',
       headers:{'content-type':'application/json'},

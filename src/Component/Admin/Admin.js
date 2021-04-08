@@ -24,7 +24,7 @@ const Admin = () => {
           </li>
         </ul>
         </div>
-           <div className="col-md-10 text-center mb-4">
+           <div className="col-md-10 text-center">
            <Switch>
           <Route exact path="/manageProduct">
             <ManageProduct/>

@@ -12,7 +12,7 @@ const ProductList = () => {
     const { productId } = useParams();
     const [products, setProducts] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:5055/product'
+        const url = 'https://tranquil-bastion-92076.herokuapp.com/product'
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -22,7 +22,7 @@ const ProductList = () => {
 
     const orderPlace =()=>{
         const orderData = {...loggedInUser,...products}
-        const url =`http://localhost:5055/addOrder`;
+        const url =`https://tranquil-bastion-92076.herokuapp.com/addOrder`;
         fetch(url,{
           method: 'POST',
           headers:{'content-type':'application/json'},
@@ -30,7 +30,6 @@ const ProductList = () => {
         })
         .then(data => console.log('database respond '))
     }
-   
 
     return (
         <div className="container">

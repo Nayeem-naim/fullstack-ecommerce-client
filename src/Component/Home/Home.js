@@ -6,7 +6,7 @@ import Loader from "react-loader-spinner";
 const Home = () => {
     const [products , setProducts] = useState([])
 useEffect(()=>{
-   const url = 'http://localhost:5055/product'
+   const url = 'https://tranquil-bastion-92076.herokuapp.com/product'
    fetch(url)
    .then(res => res.json())
    .then( data => setProducts(data))

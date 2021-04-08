@@ -7,7 +7,7 @@ const OrderProduct = () => {
     console.log(loggedInUser.email);
     const [orders , setOrders] = useState([])
     useEffect(()=>{
-      const url = 'http://localhost:5055/order?email='+loggedInUser.email
+      const url = 'https://tranquil-bastion-92076.herokuapp.com/order?email='+loggedInUser.email
       fetch(url)
       .then(res => res.json())
       .then(data => setOrders(data))
