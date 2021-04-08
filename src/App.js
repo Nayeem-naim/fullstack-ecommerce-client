@@ -12,7 +12,7 @@ import Home from './Component/Home/Home';
 import ProductList from './Component/ProductList/ProductList';
 import LogIn from './Component/LogIn/LogIn';
 import Admin from './Component/Admin/Admin';
-import { Nav} from 'react-bootstrap';
+import { Nav, Navbar} from 'react-bootstrap';
 import { useState } from 'react';
 import { createContext } from 'react';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
@@ -27,6 +27,7 @@ function App() {
     <Router>
       <p>{logInUser.name}</p>
         <Nav variant="pills" defaultActiveKey="/home">
+        <Navbar.Brand className="ml-5" style={{color:"red",fontSize: "30px"}} as={Link} to="/home">Bari Teke.com</Navbar.Brand>
           <Nav.Item>
             <Nav.Link  as={Link} to="/home">Home</Nav.Link>
           </Nav.Item>

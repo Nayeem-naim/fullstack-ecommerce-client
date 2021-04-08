@@ -4,6 +4,7 @@ import "firebase/auth"
 import firebaseConfig from './firebase.config';
 import { userContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 const LogIn = () => {
     const [loggedInUser,setLoggedInUser] = useContext(userContext)
@@ -24,23 +25,14 @@ const LogIn = () => {
           const newSignInUser = {name: displayName, email: email}
           console.log(newSignInUser);
          setLoggedInUser(newSignInUser)
-        //  storeFirebaseToken()
          history.replace(from);
         })
     }
-//     // const storeFirebaseToken = ()=>{
-//     //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-//     //         sessionStorage.setItem('token', idToken)
-//     //       }).catch(function(error) {
-//     //         // Handle error
-//     //       });
-
-//     // }
     return (
-        <div className="text-center">
+        <div className="text-center mt-4">
             
             <h1>This is Login</h1>
-            <button onClick={handleGoogleSingIn} >Google SignIn </button>
+            <Button variant="success" onClick={handleGoogleSingIn} >Google SignIn </Button>
         </div>
     );
     };

@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 
 const ManageProduct = () => {
@@ -19,7 +20,7 @@ const ManageProduct = () => {
     return (
         <container>
         {
-            product.map(pd => <p>{pd.name} <button className="deleteBtn" onClick={() => deleteProduct(pd._id)}>delete</button></p>)
+            product.map(pd => <p>{pd.name} <Button variant="success" className="deleteBtn" onClick={() => deleteProduct(pd._id)}>delete</Button></p>)
         }
         </container>
     );
